@@ -1,3 +1,4 @@
+
 import wollok.game.*
 
 object pacman {
@@ -21,6 +22,16 @@ object pacman {
 		if (self.juegoTerminado()) {
 			game.stop()
 		}
+	}
+	
+	method sumarPuntos(){
+		
+	}
+	method comerCereza(){
+		
+	}
+	method recuperarVida(){
+		
 	}
 }
 
@@ -58,4 +69,10 @@ class Rival {
 object cherry {
 	var property image = "cherry.png"
 	var property position = game.center()
+	
+	
+	method poderCereza(){
+		
+	}
+	
 }
