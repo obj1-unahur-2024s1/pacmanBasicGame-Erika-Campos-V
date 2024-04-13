@@ -30,7 +30,6 @@ class Rival {
 	const numero = 1
 	var property position = game.at(3, 3)
 	var previousPosition = position
-	
 	method image() = "rival" + numero.toString() + ".png"
 	method position() = game.at(numero + 1, numero + 1)
 	
@@ -41,7 +40,6 @@ class Rival {
 		// evitamos que se posicionen fuera del tablero
 		newX = newX.max(0).min(game.width() - 1)
 		newY = newY.max(0).min(game.height() - 1)
-		previousPosition = position
 		position = game.at(newX, newY)
 	}
 	
