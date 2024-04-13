@@ -29,10 +29,11 @@ object pacman {
 class Rival {
 	const numero = 1
 	var property position = game.at(3, 3)
-	var previousPosition
+	var previousPosition = position
 	
 	method image() = "rival" + numero.toString() + ".png"
-
+	method position() = game.at(numero + 1, numero + 1)
+	
 	method acercarseA(personaje) {
 		var otroPosicion = personaje.position()
 		var newX = position.x() + if (otroPosicion.x() > position.x()) 1 else -1
