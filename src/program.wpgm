@@ -17,3 +17,24 @@ program pacman {
 	game.start()
 	
 }
+
+
+	// rivales
+	game.addVisual(new Rival(numero = 1))
+	game.addVisual(new Rival(numero = 2))
+
+}
+    // rivales
+	const rivales = [new Rival(numero =1), new Rival(numero =2)]
+	
+			rivales.forEach { rival => 
+		game.addVisual(rival)
+		game.whenCollideDo(rival, { personaje =>
+			personaje.chocarCon(rival) // se maneja un método polimórfico
+		})
+		game.onTick(1.randomUpTo(5) * 1000, {
+			rival.acercarseA(pacman)
+		})
+	}
+	
+		
