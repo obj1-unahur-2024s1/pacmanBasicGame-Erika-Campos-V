@@ -57,6 +57,13 @@ class Rival {
 
 
 
+object cereza{
+	var property position = game.at(5,3)
+	var property image = "cherry.png"
+	
+}
+
+
 
 
 
