@@ -39,7 +39,7 @@ class Rival {
 	const numero = 1
 	var property position = game.at(3, 3)
 	var previousPosition = position
-
+    var color = "rojo"
 	method image() = "rival" + numero.toString() + ".png"
 
 	method acercarseA(personaje) {
@@ -64,6 +64,10 @@ class Rival {
 	method resetPreviousPosition() {
 		position = previousPosition 
 	}
+	
+	method cambiarDeColor(nuevoColor){
+		color = nuevoColor
+	}
 }
 
 object cherry {
@@ -71,8 +75,8 @@ object cherry {
 	var property position = game.center()
 	
 	
-	method poderCereza(){
-		
-	}
+	method poderCereza(){}
 	
 }
+// esta es la version correcta
+
