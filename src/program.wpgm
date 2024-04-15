@@ -16,12 +16,6 @@ program pacman {
 	game.addVisualCharacter(pacman)
 	
 
-
-	// rivales
-	game.addVisual(new Rival(numero = 1))
-	game.addVisual(new Rival(numero = 2))
-
-
     // rivales
 	const rivales = [new Rival(numero =1), new Rival(numero =2)]
 	
