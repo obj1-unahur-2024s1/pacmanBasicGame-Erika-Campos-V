@@ -29,10 +29,9 @@ object pacman {
 class Rival {
 	const numero = 1
 	var property position = game.at(3, 3)
-	var previousPosition = position
+	var previousPosition= position
 	method image() = "rival" + numero.toString() + ".png"
-	method position() = game.at(numero + 1, numero + 1)
-	
+
 	method acercarseA(personaje) {
 		var otroPosicion = personaje.position()
 		var newX = position.x() + if (otroPosicion.x() > position.x()) 1 else -1
@@ -40,27 +39,24 @@ class Rival {
 		// evitamos que se posicionen fuera del tablero
 		newX = newX.max(0).min(game.width() - 1)
 		newY = newY.max(0).min(game.height() - 1)
+		previousPosition = position
 		position = game.at(newX, newY)
 	}
 	
-	method resetPosition() {
-		position = game.at(numero + 1, numero + 1)
+	method chocarCon(otro) {
+		self.resetPosition()
 	}
 	
-	method chocarCon(otro) {
-		self.resetPreviousPosition()
-	}
-	method resetPreviousPosition() {
+	method resetPosition() {
 		position = previousPosition 
 	}
 }
 
 
 
-object cereza{
-	var property position = game.at(5,3)
-	var property image = "cherry.png"
-	
+class Cereza{
+	var property position = game.at(0,8)
+	method image() = "cherry.png"
 }
 
 
